@@ -1,15 +1,22 @@
+/* Reset Global */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilo do Body */
 body{
     text-align: center; 
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background: linear-gradient(to right, #ffe4c4, #ffffff);
+    background: linear-gradient(to right, #ffe4c4, #9acd32);
 }
 
+h1, h2{
+    margin-bottom: 20px;
+}
+
+/* Estilos das Sections */
 section{
     display: flex;
     align-items: center;
@@ -21,7 +28,8 @@ section{
     margin: 50px;
 }
 
-.item-blue{ 
+/* Estilos do Item Blue */
+.itemBlue{ 
     color: #ffff00;
     font-size: 20px;
     font-weight: bold; /* Mesmo que o valor de 700. */
@@ -31,11 +39,13 @@ section{
     border-radius: 20px 40px;
     margin-right: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.item-purple{
+/* Estilos Item Purple */
+.itemPurple{
     color: #ffff00;
     font-size: 20px;
     font-weight: 700;
@@ -45,11 +55,13 @@ section{
     border-radius: 20px 40px;
     margin-right: 20px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.item-green{
+/* Estilos Item Green */
+.itemGreen{
     color: #ffff00;
     font-size: 20px;
     font-weight: bold;
@@ -58,6 +70,138 @@ section{
     background-color: #008000;
     border-radius: 20px 40px;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+/* Transition com Hover */
+
+.transition{
+    transition: backgroun-color 0.5s;
+}
+
+.transition:hover{
+    background-color: #ff0000;
+}
+
+.transitionSize{
+    transition: transform 1s;
+}
+
+.transitionSize:hover{
+    transform: scale(1.5);
+}
+
+.transitionRotate{
+    transition: transform 0.5s;
+}
+
+.transitionRotate:hover{
+    transform: rotateX(360deg); /* VALOR ROTATE PODE ROTACIONAR NOS EIXOS: X, Y e Z. ACOMPANHADOS DOS GRAUS, ENTRE PARÊNTESES (90deg)*/
+}
+
+.transitionDelay{
+    transition: width 1s 0.5s, height 1s; /* SINTAXE FICA ==> transition: propriedade tempo delay (tudo em segundos).*/
+}
+
+.transitionDelay:hover{
+    width: 200px;
+    height: 200px;
+}
+
+.transitionCheckbox{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    transition: transform 0.5s;
+}
+
+.transitionCheckbox:checked{
+    transform: rotateY(360deg);
+}
+
+.transitionRadio{
+    width: 50px;
+    height: 50px;
+    margin-right: 50px;
+    transition: transform 0.5s;
+}
+
+.transitionRadio:checked{
+    transform: scale(2);
+}
+
+.transitionText{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;
+    text-align: center;
+    transition: transform 1s;
+}
+
+.transitionText:focus{
+    transform: scale(0.5) scaleX(0.7) rotateZ(180deg);
+}
+
+
+.animationFade{
+    animation: fadeIn 4s linear ; /* nome da keyframe tempo tipo*/
+}
+
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.animationFadeOut{
+    animation: fadeIn 4s linear ;
+    animation-direction: reverse;
+}
+
+.animationFadeInOut{
+    animation: fadeInOut 5s linear infinite;
+}
+
+@keyframes fadeInOut{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.animationSpinner{
+    animation: rotate 4s linear infinite;
+}
+
+.animationEase{
+    animation: rotate 4s ease infinite;
+}
+
+.animationEaseOut{
+    animation: rotate 4s ease-out infinite;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
 }

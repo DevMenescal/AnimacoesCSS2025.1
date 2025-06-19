@@ -3,37 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animações CSS</title>
+    <title>Animações e Transições</title>
     <link rel="stylesheet" href="./style/styles.css">
 </head>
 <body>
-    <h1>Transition</h1>
+    <h1>TRANSITION</h1>
 
-    <h2>Hover</h2>
+    <h2>Hover(pseudo-seletor)</h2>
 
-    <h3>Alterar cor de um Item</h3>
+    <h3>Alterar cor.</h3>
 
     <section>
-        <button class="item-blue transition">Azul</button>
-        <button class="item-purple transition">Roxo</button>
-        <button class="item-green transition">Verde</button>
+        <button class="itemBlue transition">Azul</button>
+        <button class="itemPurple transition">Roxo</button>
+        <button class="itemGreen transition">Verde</button>
     </section>
 
-    <h3>Mudar Tamanho de um Item</h3>
+    <h3>Mudar de Tamanho</h3>
 
     <section>
-        <button class="item-blue transition-size">Azul</button>
-        <button class="item-purple transition-size">Roxo</button>
-        <button class="item-green transition-size">Verde</button>
+        <button class="itemBlue transitionSize">Azul</button>
+        <button class="itemPurple transitionSize">Roxo</button>
+        <button class="itemGreen transitionSize">Verde</button>
     </section>
 
     <h3>Rotacionar</h3>
 
     <section>
-        <button class="item-blue transition-rotate">Azul</button>
-        <button class="item-purple transition-rotate">Roxo</button>
-        <button class="item-green transition-rotate">Verde</button>
+        <button class="itemBlue transitionRotate">Azul</button>
+        <button class="itemPurple transitionRotate">Roxo</button>
+        <button class="itemGreen transitionRotate">Verde</button>
+    </section>
+
+    <h3>Delay (Atraso)</h3>
+
+    <section>
+        <button class="itemBlue transitionDelay">Azul</button>
+        <button class="itemPurple transitionDelay">Roxo</button>
+        <button class="itemGreen transitionDelay">Verde</button>
+    </section>
+
+    <h3>Checked (Marcação)</h3>
+
+    <section>
+        <input type="checkbox" class="transitionCheckbox">
+        <input type="checkbox" class="transitionCheckbox" >
+        <input type="checkbox" class="transitionCheckbox">
+    </section>
+
+    <h3>Radio Check (Marcação de Radio)</h3>
+
+    <section>
+        <input type="radio" class="transitionRadio">
+        <input type="radio" class="transitionRadio">
+        <input type="radio" class="transitionRadio">
+    </section>
+
+    <h3>Focus</h3>
+
+    <section>
+        <input type="text" class="transitionText">
     </section>
     
+    <h1>Animações</h1>
+
+    <h2>Fade</h2>
+
+    <section>
+        <button class="itemBlue animationFade">Azul</button>
+        <button class="itemPurple animationFadeOut">Roxo</button>
+        <button class="itemGreen animationFadeInOut">Verde</button>
+    </section>
+
+    <h2>Spinners</h2>
+
+      <section>
+        <button class="itemBlue animationSpinner">Azul</button>
+        <button class="itemPurple animationEase">Roxo</button>
+        <button class="itemGreen animationEaseOut">Verde</button>
+    </section>
 </body>
 </html>
