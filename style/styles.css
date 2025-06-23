@@ -205,3 +205,90 @@ section{
         transform: rotateZ(360deg);
     }
 }
+
+.positionBox{
+    background-color: #7fffd4;
+    border-radius: 30px;
+    width: 90%;
+    height: 300px;
+    position: relative;
+}
+
+.animationPosition{
+    position: relative;
+    animation: position 4s linear infinite;
+    animation-direction:alternate;
+}
+
+@keyframes position{
+    0%{
+        top:0;
+        left: 0;
+    }
+    25%{
+        top: 0;
+        left: calc(100% - 100px);
+    }
+    50%{
+        top: calc(100% - 100px);
+        left: calc(100% - 100px);
+    }
+    75%{
+        top: calc(100% - 100px);
+        left: 0;
+    }
+    100%{
+        top:0;
+        left: 0;
+    }
+}
+
+.animationContent::after{
+    content: '';
+    animation: promocao 4s infinite;
+}
+
+@keyframes promocao{
+    0%{
+        content: "PROMOÇÃO";
+    }
+    50%{
+        content: "SÓ HOJE";
+    }
+    100%{
+        content: "FRETE GRÁTIS";
+    }
+}
+
+.container{
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.clock,
+.hours,
+.minutes{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hours{
+    animation: girarPonteiro 720s linear infinite;
+}
+
+.minutes{
+    animation: girarPonteiro 60s linear infinite;
+}
+
+@keyframes girarPonteiro{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
